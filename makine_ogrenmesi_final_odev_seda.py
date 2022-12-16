@@ -83,6 +83,29 @@ plt.ylabel("cumulative explained variance")
 plt.show()
 
 
+# In[11]:
+
+
+df_sns=pd.DataFrame({"var":pca.explained_variance_ratio_,"PC":["PC1","PC2","PC3","PC4"]})
+df_sns
+
+
+# In[12]:
+
+
+df_sns=pd.DataFrame({"var":pca.explained_variance_ratio_,"PC":["PC1","PC2","PC3","PC4"]})
+df_sns
+
+
+# In[13]:
+
+
+sns.barplot(x="PC",y="var",data=df_sns,color="c")
+plt.ylabel("Variance Explained")
+plt.xlabel("Principle Components")
+plt.show()
+
+
 # In[ ]:
 
 
