@@ -106,6 +106,25 @@ plt.xlabel("Principle Components")
 plt.show()
 
 
+# In[16]:
+
+
+df["p1"]=x_pca[:,0]
+df["p2"]=x_pca[:,1]
+color=["red","green","blue"]
+
+
+# In[18]:
+
+
+for each in range(3):
+ plt.scatter(df.p1[df.sinif==each],df.p2[df.sinif==each],color=color[each],label=iris.target_names[each])
+plt.legend()
+plt.xlabel("p1")
+plt.ylabel("p2")
+plt.show()
+
+
 # In[ ]:
 
 
