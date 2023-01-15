@@ -72,7 +72,37 @@ cv2.waitKey(0)
 cv2.destroyAllWindows()
 
 
-# In[23]:
+# In[24]:
+
+
+import cv2
+import numpy as np
+
+import cv2
+
+# resmi oku
+image = cv2.imread('binary_image.png')
+
+# resmi üzerine açma işlemini uygula
+opened = cv2.morphologyEx(image, cv2.MORPH_OPEN, kernel=None)
+
+# resmi üzerine genişleme işlemini uygula
+dilated = cv2.dilate(opened, kernel=None, iterations=1)
+
+# resmi 'dilated.png' olarak kaydet
+cv2.imwrite('dilated.png', dilated)
+
+# resmi aç
+cv2.imshow('Dilated Image', dilated)
+
+# ekranda gösterilen resmi beklet
+cv2.waitKey(0)
+
+# tüm pencereleri kapat
+cv2.destroyAllWindows()
+
+
+# In[ ]:
 
 
 import cv2
@@ -100,10 +130,4 @@ cv2.waitKey(0)
 
 # tüm pencereleri kapat
 cv2.destroyAllWindows()
-
-
-# In[ ]:
-
-
-
 
